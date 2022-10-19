@@ -1,0 +1,89 @@
+﻿@model IEnumerable<CapaPresentacionAdmin.Models.Usuario>
+
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<ol class="breadcrumb mt-4">
+    <li class="breadcrumb-item"><a href="index.html">Resumen</a></li>
+    <li class="breadcrumb-item active">Usuarios</li>
+</ol>
+<div class="card-body">
+    <button type="button" class="btn btn-success">Nuevo Usuario</button>
+</div>
+<div class="card mb-4">
+    <div class="card-header">
+        <i class="fas fa-users mt-1 "></i>
+        Listado Usuarios
+    </div>
+    <div class="card-body">
+        <table class="table">
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.Nombres)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Apellidos)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Correo)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Clave)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Restablecer)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Activo)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.FechaRegistro)
+                </th>
+                <th></th>
+            </tr>
+
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Nombres)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Apellidos)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Correo)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Clave)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Restablecer)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Activo)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.FechaRegistro)
+                    </td>
+                    <td>
+                        @Html.ActionLink("Edit", "Edit", new { id = item.IdUsuario }) |
+                        @Html.ActionLink("Details", "Details", new { id = item.IdUsuario }) |
+                        @Html.ActionLink("Delete", "Delete", new { id = item.IdUsuario })
+                    </td>
+                </tr>
+            }
+        </table>
+    </div>
+</div>
+@*esta seccion permite realizar comunicaciones mediantes ajax a metodos
+es de tener presente que se debe instalar el nuget requirejs y adicional configurar 
+el archivo require-config para que funcione*@
+    <script data-main="../Scripts/require-config.js" src="~/Scripts/require.js"></script>
+    <script>
+        require(["app/user/user", "jquery"], function (o, $) {
+            o.init();
+            console.log(o.init);
+        });
+    </script>
