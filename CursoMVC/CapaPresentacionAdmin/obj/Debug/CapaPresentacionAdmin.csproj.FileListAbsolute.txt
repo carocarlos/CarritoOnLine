@@ -165,8 +165,8 @@ D:\CC2\LB\0.OLD\1.Mine\CursoMVC_2\CursoMVC\CapaPresentacionAdmin\bin\es\System.W
 D:\CC2\LB\0.OLD\1.Mine\CursoMVC_2\CursoMVC\CapaPresentacionAdmin\bin\es\System.Web.WebPages.resources.dll
 D:\CC2\LB\0.OLD\1.Mine\CursoMVC_2\CursoMVC\CapaPresentacionAdmin\bin\es\System.Web.WebPages.Deployment.resources.dll
 D:\CC2\LB\0.OLD\1.Mine\CursoMVC_2\CursoMVC\CapaPresentacionAdmin\bin\es\System.Web.WebPages.Razor.resources.dll
-D:\CC2\LB\0.OLD\1.Mine\CursoMVC_2\CursoMVC\CapaPresentacionAdmin\obj\Debug\CapaPresentacionAdmin.csprojAssemblyReference.cache
 D:\CC2\LB\0.OLD\1.Mine\CursoMVC_2\CursoMVC\CapaPresentacionAdmin\obj\Debug\CapaPresentacionAdmin.csproj.CoreCompileInputs.cache
 D:\CC2\LB\0.OLD\1.Mine\CursoMVC_2\CursoMVC\CapaPresentacionAdmin\obj\Debug\CapaPresentacionAdmin.csproj.CopyComplete
 D:\CC2\LB\0.OLD\1.Mine\CursoMVC_2\CursoMVC\CapaPresentacionAdmin\obj\Debug\CapaPresentacionAdmin.dll
 D:\CC2\LB\0.OLD\1.Mine\CursoMVC_2\CursoMVC\CapaPresentacionAdmin\obj\Debug\CapaPresentacionAdmin.pdb
+D:\CC2\LB\0.OLD\1.Mine\CursoMVC_2\CursoMVC\CapaPresentacionAdmin\obj\Debug\CapaPresentacionAdmin.csprojAssemblyReference.cache

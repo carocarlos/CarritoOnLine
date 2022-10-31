@@ -13,7 +13,12 @@ namespace CapaPresentacionAdmin
 
             bundles.Add(new Bundle("~/bundles/complementos").Include(
                         "~/Scripts/scripts.js",
+                        "~/Scripts/DataTables/jquery.dataTables.js",
+                        "~/Scripts/DataTables/dataTables.responsive.js",
+                        //"~/Scripts/app/user/User.js",
+                        "~/Scripts/app/user/User2.js",
                         "~/Scripts/fontawesome/all.min.js"));
+
 
             //bundles.Add(new ScriptBundle("~/bundles/jqueryval").Include(
             //            "~/Scripts/jquery.validate*"));
@@ -26,7 +31,11 @@ namespace CapaPresentacionAdmin
             bundles.Add(new Bundle("~/bundles/bootstrap").Include(
                       "~/Scripts/bootstrap.bundle.js"));
 
-            bundles.Add(new StyleBundle("~/Content/css").Include("~/Content/site.css"));
+            bundles.Add(new StyleBundle("~/Content/css").Include(
+                "~/Content/site.css",
+                "~/Content/DataTables/css/jquery.dataTables.css",
+                "~/Content/DataTables/css/responsive.dataTables.css"
+                ));
         }
     }
 }

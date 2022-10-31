@@ -39,7 +39,7 @@ namespace CapaPresentacionAdmin.DataAccess
                     ListUsers.Add(ObjUsers);
                 }
             }
-            catch(Exception e)
+            catch (Exception e)
             {
                 throw e;
             }
@@ -51,6 +51,40 @@ namespace CapaPresentacionAdmin.DataAccess
                 }
             }
             return ListUsers;
+        }
+
+        public string SaveUser(Usuario ObjUsuario)
+        {
+            int resultado = 0;
+            string message = string.Empty;
+            SqlConnection con = new SqlConnection();
+            try
+            {
+                
+                con = Conexion.GetInstancia().CrearConexion();
+                SqlCommand cmd = new SqlCommand("SP_SaveUsuario", con);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.Add("@NOMBRE", SqlDbType.VarChar).Value = ObjUsuario.Nombres;
+                cmd.Parameters.Add("@APELLIDO", SqlDbType.VarChar).Value = ObjUsuario.Apellidos;
+                cmd.Parameters.Add("@CORREO", SqlDbType.VarChar).Value = ObjUsuario.Correo;
+                cmd.Parameters.Add("@ACTIVO", SqlDbType.Int).Value = ObjUsuario.Activo;
+                con.Open();
+                resultado = cmd.ExecuteNonQuery();
+                message = resultado == 1 ? "OK" : "ERROR";
+
+            }
+            catch (Exception e)
+            {
+                throw e;
+            }
+            finally
+            {
+                if (con.State == ConnectionState.Open)
+                {
+                    con.Close();
+                }
+            }
+            return message;
         }
         
     }
