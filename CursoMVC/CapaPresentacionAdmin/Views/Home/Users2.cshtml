@@ -82,7 +82,7 @@
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-                <button type="button" class="btn btn-primary" id="SaveUser">Guardar</button>
+                <button type="button" class="btn btn-primary"  id="SaveUser">Guardar</button>
             </div>
         </div>
     </div>
@@ -91,20 +91,12 @@
 
 
 @section scripts{
-
-    <script type="text/javascript" data-main="/Scripts/app/user/User2" src="~/Scripts/require.js"></script>
-
-
-    @*<script type="text/javascript" src="~/Scripts/require.js"></script>
-    <script>
-        require(['app/user/User2'], function (User2) {
-            User2.init();
-        });*@
-
-
-
+    <script type="text/javascript" src="~/Scripts/require.js"></script>
+    <script>        
+            require(['/Scripts/app/user/User2.js'])        
     </script>
 }
+
 
 
 
