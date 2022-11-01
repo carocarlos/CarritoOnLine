@@ -1,10 +1,5 @@
-﻿
+﻿$(document).ready(function () {
 
-
-///-----------------------------------------------------------------OPCION UNO DE LLAMADO A JAVASCRIPT----------------------------------------------------------------//
-
-require([], function () {
- 
     //Cargue de la tabla de usuarios 
     var tablaData;
     tablaData = $("#tabla").DataTable({
@@ -54,7 +49,7 @@ require([], function () {
         usuario.Apellidos = $("#txtApellido").val();
         usuario.Correo = $("#txtmail").val();    
         usuario.Activo = $("#cboActivo").val(); //Validar porque no esta Guardando bien
-
+        
 
         $.ajax({
             type: "POST",
@@ -67,12 +62,12 @@ require([], function () {
             },
             error: function (data) {
                 alert("Se presentó un error ");
-
+    
             }
         });
     });
-
-    //Cargue de usuario seleccionado en la tabla para ser actualizado
+    
+    //
     $("#tabla tbody").on("click", '.btn-editar', function () {
 
         var vfilaSeleccionada = $(this).closest("tr"); //Se obtiene la fila seleccionada
@@ -81,7 +76,9 @@ require([], function () {
     })
 
 
-    //-------------------------------------------Inicio de Funciones ---------------------------------------------//
+
+
+    //-------------------------------------------Funciones ---------------------------------------------//
     function abiriModal(json) {
 
         $("#txtId").val(0);
@@ -101,30 +98,7 @@ require([], function () {
         console.log(json);
         $("#FormModal").modal("show");
     }
-    //--------------------------------------------Fin de Funciones ----------------------------------------------//
+    
 });
-
-///-----------------------------------------------------------------OPCION UNO DE LLAMADO A JAVASCRIPT----------------------------------------------------------------//
-
-
-
-
-
-
-
-//-----------------------------------------------------------------OPCION DOS DE LLAMADO A JAVASCRIPT----------------------------------------------------------------//
-//define([], function () {
-//    var init = function () { 
-//            alert("Entro por el define");
-//        }
-//    }
-//-----------------------------------------------------------------OPCION DOS DE LLAMADO A JAVASCRIPT----------------------------------------------------------------//
-
-
-
-
-
-
-
 
 
